@@ -1,9 +1,14 @@
-const app = angular.module('app', []);
-app.directive('bgColor', function () {
+const app = angular.module('app', [])
+app.directive('bordered', function () {
     return {
         restrict: 'A',
-        link: function (scope, element, attrs) {
-            element.css("background-color", attrs.bgColor)
+        multiElement: true,
+        link: function (scope, elements) {
+            angular.forEach(elements, function (element) {
+                if (element.nodeName !== '#text') {
+                    angular.element(element).css('border', '1px solid red')
+                }
+            })
         }
     }
-});
+})

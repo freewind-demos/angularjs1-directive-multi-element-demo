@@ -1,7 +1,5 @@
-AngularJS1 Directive Link Demo
-==============================
-
-Do some DOM operations in `link` function of directive.
+AngularJS1 Directive `multiElement` Demo
+========================================
 
 ```
 npm install
